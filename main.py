@@ -26,7 +26,7 @@ def get_image():
 def add_watermark():
     global image, preview_image
     watermark_text = watermark_text_entry.get()
-    title_font = ImageFont.truetype('playfair/playfair-font.ttf', 160)
+    title_font = ImageFont.truetype(font='ubuntu-font/Ubuntu-R.ttf', size=160)
     text_position = (image.width / 2, image.height / 2)
     anc = "mm"
     if variable.get() == 'Top Left':
@@ -70,8 +70,6 @@ wd_width = screen.winfo_screenwidth() * 0.5
 wd_height = screen.winfo_screenheight() * 0.5
 cv_width = int(round(wd_width * 0.8))
 cv_height = int(round(wd_height * 0.8))
-
-apply_png = PhotoImage(file='images/apply_btn.png')
 
 screen.config(width=wd_width, height=wd_height, padx=4, pady=4, background=BACKGROUND_COLOR)
 
